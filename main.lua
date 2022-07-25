@@ -257,11 +257,11 @@ game:GetService("RunService").RenderStepped:Connect(function()
 	end
 end)
 local boughtonce = false
-game:GetService("CoreGui"):WaitForChild("PurchasePrompt"):WaitForChild("ProductPurchaseContainer"):WaitForChild("Animator"):WaitForChild("Prompt"):WaitForChild("AlertContents"):WaitForChild("Footer"):WaitForChild("Buttons")["1"].MouseButton1Down:Connect(function()
+game:GetService("CoreGui"):WaitForChild("PurchasePrompt"):WaitForChild("ProductPurchaseContainer"):WaitForChild("Animator"):WaitForChild("Prompt"):WaitForChild("AlertContents"):WaitForChild("Footer"):WaitForChild("Buttons"):WaitForChild("1").MouseButton1Down:Connect(function()
 	TweenService:Create(load, tweenInfo2, {TextTransparency = 0,BackgroundTransparency = 0}):Play()
 	TweenService:Create(agree, tweenInfo, {TextTransparency = 1,BackgroundTransparency = 1}):Play()
 	wait(3)
-	game:GetService("CoreGui"):WaitForChild("PurchasePrompt"):WaitForChild("ProductPurchaseContainer"):WaitForChild("Animator"):WaitForChild("Prompt"):WaitForChild("AlertContents"):WaitForChild("Footer"):WaitForChild("Buttons")["2"].MouseButton1Down:Connect(function()
+	game:GetService("CoreGui"):WaitForChild("PurchasePrompt"):WaitForChild("ProductPurchaseContainer"):WaitForChild("Animator"):WaitForChild("Prompt"):WaitForChild("AlertContents"):WaitForChild("Footer"):WaitForChild("Buttons"):WaitForChild("2").MouseButton1Down:Connect(function()
         wait(2)
 		if game:GetService("CoreGui"):FindFirstChild("PurchasePrompt") then
         for i, v in pairs(game:GetService("CoreGui").PurchasePrompt:GetChildren()) do
