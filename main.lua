@@ -59,6 +59,7 @@ local UICorner_2 = Instance.new("UICorner")
 local load = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 repeat wait() until game:IsLoaded()
+repeat wait() until game.Players.LocalPlayer
 --Properties:
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
