@@ -26,7 +26,7 @@ spawn(function()
         v.TextTransparency = 1
     end
     if v:IsA("ImageButton") then
-        v.ImageTransparency = 0
+        v.ImageTransparency = 1
     end
     if v:IsA("ImageLabel") then
         v.ImageTransparency = 1
