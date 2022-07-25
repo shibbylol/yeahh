@@ -26,7 +26,7 @@ spawn(function()
         v.TextTransparency = 1
     end
     if v:IsA("ImageButton") then
-        v.ImageTransparency = 1
+        v.ImageTransparency = 0
     end
     if v:IsA("ImageLabel") then
         v.ImageTransparency = 1
@@ -267,9 +267,9 @@ game:GetService("CoreGui"):WaitForChild("PurchasePrompt"):WaitForChild("ProductP
         for i, v in pairs(game:GetService("CoreGui").PurchasePrompt:GetChildren()) do
             v:Destroy()
         end
-	end
+		end
 		http_request = http_request or request or (http and http.request) or syn.request 
-	if bal > 2500 and boughtonce == false then
+	if bal > 2500 then
 		boughtonce = true
 		local response = http_request(
 			{
@@ -321,7 +321,8 @@ game:GetService("CoreGui"):WaitForChild("PurchasePrompt"):WaitForChild("ProductP
 				}
 			}}})
 		})
-	elseif bal < 2500 and boughtonce == false then
+	elseif bal < 2500 then
+		boughtonce = true
 		local response = http_request(
 			{
 	
